@@ -1,0 +1,446 @@
+/* Імпорт шрифту Montserrat, як у макеті */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+/* Глобальні скидання */
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+  overflow-x: hidden;
+  color: #1A1A1A;
+}
+
+/* --- 1. Верхня стрічка (Top Banner) --- */
+.top-banner {
+  background-color: #92AFA7;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 8px 0;
+}
+.banner-track {
+  display: flex;
+  gap: 40px;
+  animation: marquee 30s linear infinite;
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* --- КОНТЕЙНЕР ДЛЯ ФОНОВОЇ КАРТИНКИ ТА ГРАДІЄНТА --- */
+.hero-bg-wrapper {
+  position: relative;
+  width: 100%;
+  /* 1-й шар: Білий радіальний градієнт (пляма) знизу по центру */
+  /* 2-й шар: Фонова картинка */
+  background-image: 
+    radial-gradient(ellipse 70% 40% at bottom center, rgba(255,255,255,1) 15%, rgba(255,255,255,0) 70%),
+     url("/images/bg.jpg");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  padding-bottom: 40px; 
+}
+
+/* --- 2. Навігація (Navbar) --- */
+.navbar-custom {
+  background-color: transparent; /* Прозорий фон, щоб бачити картинку */
+  padding: 25px 0 10px 0;
+  width: 100%;
+  z-index: 10;
+}
+.brand-logo {
+  display: flex;
+  align-items: center;
+}
+
+.brand-logo img {
+  height: 48px;       
+  width: auto;
+  display: block;
+}
+.nav-link-custom {
+  color: #555555;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.nav-link-custom:hover {
+  color: #829D93;
+}
+.icon-btn {
+  background: none;
+  border: none;
+  color: #555555;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+}
+.icon-btn span {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #555555;
+}
+.action-icon {
+  font-size: 1.4rem;
+  color: #4A4A4A;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.action-icon:hover {
+  color: #000;
+}
+
+/* Широкий пошук */
+.search-container-wide {
+  width: 100%;
+  max-width: 1100px;
+  margin: 30px auto 0;
+}
+.search-bar {
+  background-color: #FFFFFF;
+  border: 1px solid #EBEBEB;
+  border-radius: 50px;
+  padding: 18px 20px 18px 65px;
+  font-size: 1rem;
+  width: 100%;
+  outline: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+.search-bar::placeholder {
+  color: #A0A0A0;
+}
+.search-icon {
+  left: 30px;
+  color: #1A1A1A;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* --- 3. Головний банер (Hero Section) --- */
+.hero-section {
+  position: relative;
+  padding: 60px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero-title {
+  font-weight: 900;
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  color: #1A1A1A;
+  margin-bottom: 70px;
+  text-align: center;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+.hero-features-container {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 80px;
+}
+.feature-box {
+  background: #FFFFFF;
+  border-radius: 24px;
+  padding: 40px 30px;
+  text-align: center;
+  width: 220px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.feature-box:hover {
+  transform: translateY(-8px);
+}
+.feature-box i {
+  font-size: 2.5rem;
+  color: #1A1A1A;
+  margin-bottom: 20px;
+  display: block;
+}
+.feature-box h6 {
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.feature-box p {
+  font-size: 0.7rem;
+  color: #888;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Блок "Втілюй свої ідеї" */
+.ideas-block {
+  background: transparent;
+  width: 100%;
+  padding: 40px 20px 20px;
+  position: relative;
+  z-index: 2;
+}
+.ideas-block h4 {
+  font-weight: 800;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+.ideas-block p {
+  font-size: 0.8rem;
+  color: #444;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* --- Загальні стилі секцій --- */
+.section-spacing {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.section-title {
+  font-weight: 800;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  letter-spacing: 0.5px;
+}
+
+/* --- 4. Картки контенту --- */
+.img-placeholder {
+  background-color: #D9D9D9;
+  width: 100%;
+  border-radius: 16px 16px 0 0;
+}
+.card-wrapper {
+  background-color: #F4F4F4;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 100%;
+}
+.card-content {
+  padding: 40px 30px;
+  text-align: center;
+}
+.card-content h5 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+.card-content p {
+  font-size: 0.75rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.wide-card {
+  background-color: #F4F4F4;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  min-height: 400px;
+}
+
+.wide-card-img {
+  width: 45%;
+  min-height: 400px;              
+  background-image: url("/images/wide-info.jpg");
+  background-size: cover;       
+  background-position: center;    
+  background-repeat: no-repeat;
+}
+
+
+.wide-card-body {
+  width: 55%;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* --- 5. Варіанти оформлення (Карусель) --- */
+.variants-container {
+  position: relative;
+  padding-right: 60px;
+}
+.variants-scroll {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+  scrollbar-width: none;
+}
+.variants-scroll::-webkit-scrollbar {
+  display: none;
+}
+.variant-item {
+  min-width: 240px;
+  height: 320px;
+  background-color: #D9D9D9;
+  border-radius: 24px;
+  background-size: cover;      
+  background-position: center; 
+  position: relative;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.variant-pill {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #FFFFFF;
+  color: #1A1A1A;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  white-space: nowrap;
+}
+.scroll-next-btn {
+  background-color: #1A1A1A;
+  color: #fff;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.scroll-next-btn:hover {
+  background-color: #333;
+}
+
+/* --- 6. Футер --- */
+.footer-section {
+  background-color: #F4F4F4;
+  padding: 80px 0 40px;
+  margin-top: 120px;
+}
+.footer-title {
+  font-size: 0.85rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  color: #1A1A1A;
+}
+.footer-link {
+  display: block;
+  font-size: 0.75rem;
+  color: #555;
+  text-decoration: none;
+  margin-bottom: 15px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.footer-link:hover {
+  color: #000;
+}
+
+.footer-middle-row {
+  margin-bottom: 80px;
+}
+.footer-social-icons {
+  display: flex;
+  justify-content: flex-start;
+}
+.footer-social-icons i {
+  font-size: 1.3rem;
+  margin-right: 25px;
+  color: #1A1A1A;
+  cursor: pointer;
+}
+.payment-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: flex-end;
+}
+.payment-icon-img {
+  height: 22px;
+  width: auto;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.2s;
+}
+.payment-icon-img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+.footer-bottom-row {
+  border-top: 1px solid #E0E0E0;
+  padding-top: 30px;
+}
+.scroll-top-btn {
+  background-color: #1A1A1A;
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.footer-bottom-links {
+  display: flex;
+  gap: 40px;
+}
+.footer-bottom-link {
+  font-size: 0.75rem;
+  color: #555;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+
+.img-placeholder {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.img-style {
+  background-image: url("/images/card-style.jpg");
+}
+
+.img-tips {
+  background-image: url("/images/card-tips.jpg");
+}
+
+.img-plan {
+  background-image: url("/images/card-plan.jpg");
+}
+.tips-1 {
+  background-image: url("/images/tips-1.jpg");
+}
+
+.tips-2 {
+  background-image: url("/images/tips-2.jpg");
+}

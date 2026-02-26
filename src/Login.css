@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+body {
+  margin: 0;
+  background: #f5f5f5;
+}
+
+/* ===== PAGE ===== */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== CARD ===== */
+.login-card {
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  height: 680px; 
+  background: #fff;
+  display: flex;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* ===== LEFT SIDE ===== */
+.login-left {
+  width: 45%;
+  height: 100%; 
+  padding: 40px;
+  background-image:
+    url("/images/login-bg.jpg");
+  background-size: cover;     
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.back-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: #000;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.login-left h2 {
+  margin-top: 120px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #111;
+}
+
+/* ===== RIGHT SIDE ===== */
+.login-right {
+  width: 55%;
+  padding: 70px 90px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-right label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.login-right input[type="text"],
+.login-right input[type="password"] {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 6px;
+  border: 1px solid #999;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.login-right input:focus {
+  outline: none;
+  border-color: #000;
+}
+
+/* ===== HINT TEXT ===== */
+.login-hint {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.4;
+  margin-bottom: 24px;
+}
+
+.login-hint a {
+  color: #666;
+  text-decoration: underline;
+}
+
+/* ===== PASSWORD ===== */
+.password-field {
+  position: relative;
+}
+
+.password-field input {
+  padding-right: 44px;
+}
+
+.eye {
+  position: absolute;
+  right: 14px;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 15px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+
+
+/* ===== LINKS ===== */
+.forgot {
+  font-size: 13px;
+  color: #555;
+  margin: 10px 0 20px;
+  text-decoration: underline;
+}
+
+/* ===== CHECKBOX ===== */
+
+.remember-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  opacity: 0.6;
+  color: #111;
+  cursor: pointer;
+}
+
+.remember input {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.info-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* ===== BUTTONS ===== */
+.login-btn {
+  width: 100%;
+  padding: 16px;
+  border-radius: 999px;
+  border: none;
+  background: #000;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+
+.login-btn:hover {
+  background: #111;
+}
+
+.register-text {
+  font-size: 14px;
+  color: #111;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.register-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 999px;
+  border: 2px solid #000;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.register-btn:hover {
+  background: #000;
+  color: #fff;
+}
