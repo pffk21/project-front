@@ -1,0 +1,110 @@
+.top-banner {
+    background-color: #92AFA7;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 8px 0;
+}
+
+.banner-track {
+    display: flex;
+    gap: 40px;
+    animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.page-header-wrapper {
+    background-color: #FFFFFF;
+}
+
+.navbar-custom {
+    background-color: transparent;
+    padding: 25px 0 10px 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.brand-logo {
+    font-weight: 900;
+    font-size: 2.8rem;
+    color: #829D93;
+    text-decoration: none;
+    letter-spacing: -2px;
+    line-height: 0.8;
+}
+
+.nav-link-custom {
+    color: #555555;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.nav-link-custom:hover {
+    color: #829D93;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    color: #555555;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+}
+
+.icon-btn span {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #555555;
+}
+
+.action-icon {
+    font-size: 1.4rem;
+    color: #4A4A4A;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.action-icon:hover {
+    color: #000;
+}
+
+.search-container-wide {
+    width: 100%;
+    max-width: 1100px;
+    margin: 30px auto 0;
+}
+
+.search-bar {
+    background-color: #FFFFFF;
+    border: 1px solid #EBEBEB;
+    border-radius: 50px;
+    padding: 18px 20px 18px 65px;
+    font-size: 1rem;
+    width: 100%;
+    outline: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.search-icon {
+    left: 30px;
+    color: #1A1A1A;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
